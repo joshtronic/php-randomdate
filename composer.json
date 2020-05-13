@@ -1,0 +1,33 @@
+{
+  "name": "joshtronic/randomdate",
+  "description": "Random time/date generator fully compatible with PHP's date function.",
+  "version": "0.1.0",
+  "type": "library",
+  "keywords": [
+    "random",
+    "date",
+    "time",
+    "generator"
+  ],
+  "homepage": "https://github.com/joshtronic/php-randomdate",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Josh Sherman",
+      "email": "hello@joshtronic.com",
+      "homepage": "https://joshtronic.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3"
+  },
+  "require-dev": {
+    "php-coveralls/php-coveralls": ">=1",
+    "phpunit/phpunit": ">=4"
+  },
+  "autoload": {
+    "psr-4": {
+      "joshtronic\\": "src/"
+    }
+  }
+}
