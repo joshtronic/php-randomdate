@@ -7,7 +7,7 @@ Compatible with PHP 5.3+.
 ## Installation
 
 ```shell
-composer require joshtronic/php-randomdate
+composer require joshtronic/randomdate
 ```
 
 ## Usage
