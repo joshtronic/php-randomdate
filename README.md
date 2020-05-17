@@ -1,5 +1,11 @@
 # php-randomdate
 
+[![License](https://img.shields.io/packagist/l/joshtronic/php-randomdate?style=for-the-badge)](https://github.com/joshtronic/php-randomdate/blob/master/LICENSE)
+![PHP Version](https://img.shields.io/packagist/php-v/joshtronic/php-randomdate?style=for-the-badge)
+[![Test Status](https://img.shields.io/github/workflow/status/joshtronic/php-randomdate/Test?style=for-the-badge)](https://github.com/joshtronic/php-randomdate/actions)
+[![Code Coverage](https://img.shields.io/codecov/c/github/joshtronic/php-randomdate?style=for-the-badge)](https://codecov.io/gh/joshtronic/php-randomdate)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/joshtronic/php-randomdate?style=for-the-badge)](https://packagist.org/packages/joshtronic/php-randomdate)
+
 Random time/date generator fully compatible with PHP's date function.
 
 Compatible with PHP 5.3+.
@@ -13,6 +19,7 @@ composer require joshtronic/randomdate
 ## Usage
 
 ```php
+<?php
 $rd = new joshtronic\RandomDate();
 
 // Between the Unix Epoch and now
