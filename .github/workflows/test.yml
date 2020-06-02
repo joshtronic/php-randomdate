@@ -18,10 +18,6 @@ jobs:
       run: php --version
     - name: Composer Version
       run: composer --version
-    - name: Update Composer
-      run: composer self-update
-    - name: Composer Version
-      run: composer --version
     - name: Install Dependencies
       run: COMPOSER_MEMORY_LIMIT=-1 composer install
     - name: Run Tests

@@ -1,7 +1,7 @@
 {
   "name": "joshtronic/randomdate",
   "description": "Random time/date generator fully compatible with PHP's date function.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "library",
   "keywords": [
     "random",
@@ -22,7 +22,6 @@
     "php": ">=5.3"
   },
   "require-dev": {
-    "php-coveralls/php-coveralls": ">=1",
     "phpunit/phpunit": ">=4"
   },
   "autoload": {
