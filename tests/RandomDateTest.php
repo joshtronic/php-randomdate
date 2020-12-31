@@ -1,15 +1,9 @@
 <?php
+namespace joshtronic\Tests;
+use joshtronic\RandomDate;
+use PHPUnit\Framework\TestCase;
 
-require_once './src/RandomDate.php';
-
-if (
-    !class_exists('\PHPUnit_Framework_TestCase')
-    && class_exists('\PHPUnit\Framework\TestCase')
-) {
-    class_alias('\PHPUnit\Framework\TestCase', '\PHPUnit_Framework_TestCase');
-}
-
-class RandomDateTest extends PHPUnit_Framework_TestCase
+class RandomDateTest extends TestCase
 {
     public function testDate()
     {
@@ -19,7 +13,7 @@ class RandomDateTest extends PHPUnit_Framework_TestCase
             $assertRegExp = 'assertRegExp';
         }
 
-        $rd = new joshtronic\RandomDate();
+        $rd = new RandomDate();
         $date = $rd->date('Y-m-d');
 
         $this->$assertRegExp('/^[0-9]{4}(-[0-9]{2}){2}$/i', $date);
@@ -27,7 +21,7 @@ class RandomDateTest extends PHPUnit_Framework_TestCase
 
     public function testMin()
     {
-        $rd = new joshtronic\RandomDate();
+        $rd = new RandomDate();
         $date = $rd->min('yesterday')->date('Y-m-d');
 
         $min = date('Y-m-d', strtotime('yesterday'));
@@ -39,7 +33,7 @@ class RandomDateTest extends PHPUnit_Framework_TestCase
 
     public function testMax()
     {
-        $rd = new joshtronic\RandomDate();
+        $rd = new RandomDate();
         $date = $rd->min('5 days ago')->max('4 days ago')->date('Y-m-d');
 
         $min = date('Y-m-d', strtotime('5 days ago'));
@@ -51,7 +45,7 @@ class RandomDateTest extends PHPUnit_Framework_TestCase
 
     public function testBetween()
     {
-        $rd = new joshtronic\RandomDate();
+        $rd = new RandomDate();
         $date = $rd->between('7 days ago', '6 days ago')->date('Y-m-d');
 
         $min = date('Y-m-d', strtotime('7 days ago'));
@@ -63,7 +57,7 @@ class RandomDateTest extends PHPUnit_Framework_TestCase
 
     public function testReset()
     {
-        $rd = new joshtronic\RandomDate();
+        $rd = new RandomDate();
         $date = $rd->between('+8 days', '+9 days')->date('Y-m-d');
         $date = $rd->reset()->date('Y-m-d');
 
